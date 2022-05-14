@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>
+        Class 39
+    </title>
+</head>
+<body>
+    <h1>
+       <u> Form </u>
+    </h1>
+    <br>
+    <form onsubmit="validateForm(this)" >
+        <label for="fn"> First Name: </label>
+        <input type="text" id="fn" name="fn">
+        <br> <br>
+        <label for="ln"> Last Name: </label>
+        <input type="text" id="ln" name="ln">
+        <br> <br>
+        <label for="email"> Email: </label>
+        <input type="email" id="email" name="email">
+        <br> <br>
+        <label for="pw"> Password: </label>
+        <input type="password" id="pw" name="pw">
+        <br> <br>
+        <label for="cpw"> Confirm Password: </label>
+        <input type="password" id="cpw" name="cpw">
+        <br> <br>
+        <input id="submit" type="submit">
+    </form>
+    <script>
+        function validateForm(form){
+            var fn = form.fn.value;
+            //alert(fn);
+             
+              var ln = form.ln.value;
+            //alert(ln);
+
+             var email = form.email.value;
+            //alert(email);
+
+             var pw = form.pw.value;
+            //alert(pw);
+
+             var cpw = form.cpw.value;
+            //alert(cpw);
+
+            if(fn==''){
+                alert('First name cannot be empty');
+            }
+            else if(ln==''){
+                    alert('Last name cannot be empty');
+                    }
+            else if(email==''){
+                    alert('email cannot be empty' );
+                    }
+            else if(pw==''){
+                    alert('password cannot be empty' );
+                    }
+            else if(cpw==''){
+                    alert('Confirm password' );
+                    }
+            else if(pw==cpw){
+                    alert('Passwords match');
+            }
+            else if(pw!=cpw){
+                alert('Passwords do not match');
+            }
+        }
+    </script>
+</body>
+</html>
